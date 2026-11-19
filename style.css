@@ -1,0 +1,1609 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #171713;
+}
+
+/* Main Wedding Banner */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(16, 19, 13, 0.38),
+            rgba(16, 19, 13, 0.43)
+        ),
+        url("./cover.jpeg") center 42% / cover no-repeat;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+    z-index: 2;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Navbar Button */
+.nav-button {
+    color: white;
+    background: #a33b82;
+
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 3px;
+
+    font-size: 13px;
+}
+
+/* Main Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 900px;
+
+    text-align: center;
+    padding: 100px 0 45px;
+}
+
+/* Subtitle */
+.eyebrow {
+    margin-bottom: 13px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #7c4d17;
+}
+
+/* Couple Names */
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.08;
+
+    margin-bottom: 18px;
+}
+
+/* Wedding Date */
+.wedding-date {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(18px, 4vw, 55px);
+    margin-top: 48px;
+}
+
+/* Individual Time Boxes */
+.time-box {
+    min-width: 75px;
+}
+
+.time-box span {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.1;
+}
+
+.time-box small {
+    display: block;
+    margin-top: 7px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Countdown Separators */
+.separator {
+    height: 34px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+/* Bottom Message */
+.message {
+    margin-top: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 100svh;
+        background-position: 52% center;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        padding: 9px 13px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding-top: 115px;
+    }
+
+    h1 {
+        font-size: clamp(43px, 11vw, 64px);
+    }
+
+    .wedding-date {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .countdown {
+        gap: 10px;
+        margin-top: 35px;
+    }
+
+    .time-box {
+        min-width: 55px;
+    }
+
+    .time-box span {
+        font-size: 29px;
+    }
+
+    .time-box small {
+        font-size: 10px;
+    }
+
+    .separator {
+        height: 27px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .countdown {
+        gap: 7px;
+    }
+
+    .time-box {
+        min-width: 48px;
+    }
+
+    .time-box span {
+        font-size: 25px;
+    }
+}
+@media (max-width: 992px) {
+    .hero {
+        height: 650px;
+        background-position: center 60%;
+    }
+
+    .navbar {
+        padding: 22px 4%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .hero {
+        height: 700px;
+        min-height: 600px;
+        background-position: 55% center;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        width: 95%;
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: clamp(35px, 9vw, 52px);
+    }
+
+    .wedding-date {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .countdown {
+        gap: 8px;
+        margin-top: 35px;
+    }
+
+    .time-box {
+        min-width: 48px;
+    }
+
+    .time-box span {
+        font-size: 27px;
+    }
+
+    .time-box small {
+        font-size: 10px;
+    }
+
+    .separator {
+        height: 25px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .time-box {
+        min-width: 43px;
+    }
+
+    .time-box span {
+        font-size: 23px;
+    }
+}
+
+
+/* LOVE STORY SECTION */
+
+.love-story {
+    position: relative;
+    padding: 65px 6% 75px;
+    background: #fbf6f1;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Heading */
+
+.story-heading {
+    margin-bottom: 50px;
+}
+
+.story-subtitle {
+    display: block;
+    color: #7c4d17;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.story-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #241b20;
+    letter-spacing: -1px;
+}
+
+.infinity {
+    color: #b51e67;
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.story-heading p {
+    color: #8c7379;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Couple Layout */
+
+.couple-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Profile Cards */
+
+.person-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #f0dfce;
+    border-radius: 22px;
+
+    padding: 35px 25px;
+    min-height: 395px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-shadow: 0 12px 35px rgba(88, 54, 34, 0.07);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(88, 54, 34, 0.12);
+}
+
+/* Profile Images */
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    padding: 5px;
+
+    border: 1px dashed #d7a54c;
+    background: #fff8ed;
+
+    margin-bottom: 25px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+/* Names */
+
+.person-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    color: #302329;
+    margin-bottom: 12px;
+}
+
+.person-role {
+    color: #a66a24;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Description */
+
+.person-description {
+    color: #82747a;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+/* Love Quote */
+
+.love-quote {
+    color: #b51e67;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+/* Center Badge */
+
+.couple-badge {
+    width: 92px;
+    height: 92px;
+
+    border-radius: 50%;
+    border: 1px solid #d99b32;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(120, 75, 30, 0.10);
+
+    z-index: 2;
+}
+
+.couple-badge span {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #b51e67;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.couple-badge small {
+    color: #9c6b28;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .love-story {
+        padding: 55px 4%;
+    }
+
+    .couple-container {
+        grid-template-columns: 1fr 75px 1fr;
+        gap: 12px;
+    }
+
+    .person-card {
+        padding: 30px 18px;
+    }
+
+    .person-description {
+        font-size: 12px;
+    }
+
+    .couple-badge {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .love-story {
+        padding: 50px 18px;
+    }
+
+    .story-heading {
+        margin-bottom: 35px;
+    }
+
+    .story-heading h2 {
+        font-size: 34px;
+    }
+
+    .story-heading p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .couple-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 430px;
+    }
+
+    .person-card {
+        width: 100%;
+        min-height: 350px;
+        padding: 30px 22px;
+    }
+
+    .couple-badge {
+        width: 75px;
+        height: 75px;
+        order: 2;
+        margin: -8px 0;
+    }
+
+    .groom-card {
+        order: 1;
+    }
+
+    .bride-card {
+        order: 3;
+    }
+
+    .person-description {
+        max-width: 340px;
+        font-size: 13px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .love-story {
+        padding: 40px 13px;
+    }
+
+    .story-heading h2 {
+        font-size: 30px;
+    }
+
+    .person-card {
+        padding: 25px 17px;
+    }
+
+    .love-quote {
+        font-size: 11px;
+    }
+}
+
+
+
+/* JOURNEY SECTION */
+
+.journey-section {
+    background: #fbf6f1;
+    padding: 80px 20px;
+    overflow: hidden;
+    margin-top: -100px;
+}
+
+/* Heading */
+
+.journey-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.journey-heading span {
+    color: #a66a24;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.journey-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #302329;
+    margin: 12px 0;
+}
+
+.journey-heading p {
+    color: #8c7379;
+    font-size: 14px;
+}
+
+/* Roadmap */
+
+.journey-map {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Animated Road */
+
+.journey-map::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 5px;
+    transform: translateX(-50%);
+
+    background: repeating-linear-gradient(
+        to bottom,
+        #d7a54c 0px,
+        #d7a54c 12px,
+        transparent 12px,
+        transparent 22px
+    );
+
+    transform-origin: top;
+    animation: roadDraw 4s ease forwards;
+}
+
+/* Each Milestone */
+
+.journey-stop {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+
+    margin-bottom: 65px;
+}
+
+/* Cards */
+
+.journey-card {
+    background: white;
+    border: 1px solid #f0dfce;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(80, 50, 30, 0.06);
+
+    opacity: 0;
+    animation: cardReveal 0.8s ease forwards;
+}
+
+/* Left and Right Placement */
+
+.journey-stop.right .journey-card {
+    grid-column: 3;
+}
+
+.journey-stop.left .journey-card {
+    grid-column: 1;
+}
+
+/* Number Pins */
+
+.journey-pin {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #a51d60;
+    color: white;
+
+    border: 5px solid #f8e8d5;
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    z-index: 2;
+    justify-self: center;
+
+    animation: pinPulse 2s infinite;
+}
+
+/* Card Content */
+
+.journey-icon {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.journey-card small {
+    color: #a66a24;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.journey-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #302329;
+    margin: 10px 0;
+}
+
+.journey-card p {
+    color: #82747a;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.journey-card strong {
+    display: block;
+    margin-top: 15px;
+    color: #a51d60;
+    font-family: Georgia, serif;
+}
+
+/* Wedding Card */
+
+.wedding-stop {
+    border: 1px solid #d7a54c;
+    background: #fffaf3;
+}
+
+/* Animations */
+
+@keyframes roadDraw {
+    from {
+        transform: translateX(-50%) scaleY(0);
+    }
+
+    to {
+        transform: translateX(-50%) scaleY(1);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pinPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(165, 29, 96, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 0 9px rgba(165, 29, 96, 0.08);
+    }
+}
+
+/* Staggered card animation */
+
+.journey-stop:nth-child(1) .journey-card {
+    animation-delay: .3s;
+}
+
+.journey-stop:nth-child(2) .journey-card {
+    animation-delay: .8s;
+}
+
+.journey-stop:nth-child(3) .journey-card {
+    animation-delay: 1.3s;
+}
+
+.journey-stop:nth-child(4) .journey-card {
+    animation-delay: 1.8s;
+}
+
+.journey-stop:nth-child(5) .journey-card {
+    animation-delay: 2.3s;
+}
+
+.journey-stop:nth-child(6) .journey-card {
+    animation-delay: 2.8s;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 650px) {
+
+    .journey-section {
+        padding: 55px 15px;
+    }
+
+    .journey-heading h2 {
+        font-size: 32px;
+    }
+
+    .journey-map::before {
+        left: 27px;
+    }
+
+    .journey-stop {
+        grid-template-columns: 55px 1fr;
+        margin-bottom: 35px;
+        gap: 12px;
+    }
+
+    .journey-pin {
+        grid-column: 1;
+        grid-row: 1;
+        width: 48px;
+        height: 48px;
+        font-size: 13px;
+    }
+
+    .journey-stop.right .journey-card,
+    .journey-stop.left .journey-card {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .journey-card {
+        padding: 20px;
+    }
+
+    .journey-card h3 {
+        font-size: 20px;
+    }
+
+    .journey-card p {
+        font-size: 12px;
+    }
+}
+
+/* Reduce motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .journey-map::before,
+    .journey-card,
+    .journey-pin {
+        animation: none;
+    }
+
+    .journey-card {
+        opacity: 1;
+    }
+}
+
+
+/* =================================
+   WEDDING ITINERARY SECTION
+================================= */
+
+/* WEDDING ITINERARY */
+
+.wedding-itinerary-section {
+    padding: 80px 6%;
+    background: #fbf6f1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -130px;
+}
+
+.wedding-itinerary-container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.wedding-itinerary-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.wedding-itinerary-subtitle {
+    color: #a66a24;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.wedding-itinerary-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    color: #302329;
+    margin: 12px 0;
+}
+
+.wedding-itinerary-header h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    color: #a51d60;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.wedding-itinerary-header h3 span {
+    color: #d7a54c;
+}
+
+.wedding-itinerary-header p {
+    font-size: 11px;
+    color: #8c7379;
+    letter-spacing: 2px;
+}
+
+.wedding-itinerary-divider {
+    width: 65px;
+    height: 2px;
+    background: #d7a54c;
+    margin: 22px auto;
+}
+
+/* THREE COLUMN GRID */
+
+.wedding-itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* EVENT CARD */
+
+.wedding-itinerary-card {
+    background: #fff;
+    border: 1px solid #f0dfce;
+    border-radius: 20px;
+    padding: 25px 18px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(88, 54, 34, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+.wedding-itinerary-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(88, 54, 34, 0.12);
+}
+
+/* IMAGE */
+
+.wedding-itinerary-image {
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 13px;
+    margin-bottom: 20px;
+}
+
+.wedding-itinerary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.wedding-itinerary-card:hover
+.wedding-itinerary-image img {
+    transform: scale(1.06);
+}
+
+/* DETAILS */
+
+.wedding-itinerary-number {
+    font-size: 11px;
+    color: #a51d60;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.wedding-itinerary-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #302329;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.wedding-itinerary-time {
+    color: #a66a24;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.wedding-itinerary-venue {
+    color: #82747a;
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 44px;
+}
+
+/* QR CODE */
+
+.wedding-itinerary-qr {
+    margin-top: auto;
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wedding-itinerary-qr > div {
+    width: 105px;
+    height: 105px;
+    padding: 5px;
+    background: white;
+    border: 1px solid #f0dfce;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wedding-itinerary-qr img {
+    max-width: 100%;
+    display: block;
+}
+
+.wedding-itinerary-qr span {
+    color: #a51d60;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+
+.wedding-itinerary-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.wedding-itinerary-footer p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #302329;
+}
+
+.wedding-itinerary-footer span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a66a24;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .wedding-itinerary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .wedding-itinerary-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .wedding-itinerary-section {
+        padding: 55px 18px;
+        margin-top: -60px;
+    }
+
+    .wedding-itinerary-header h2 {
+        font-size: 32px;
+    }
+
+    .wedding-itinerary-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .wedding-itinerary-card:last-child {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+    .wedding-itinerary-image {
+        height: 190px;
+    }
+
+    .wedding-itinerary-card {
+        padding: 22px;
+    }
+}
+
+/* PRINT */
+
+@media print {
+    .wedding-itinerary-section {
+        background: white;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .wedding-itinerary-card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
+
+
+/* =================================
+   WEDDING GALLERY SECTION
+================================= */
+
+.gallery-section {
+    background: #fbf6f1;
+    padding: 80px 6%;
+    overflow: hidden;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADING */
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.gallery-heading span {
+    color: #a66a24;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.gallery-heading h2 {
+     font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    color: #302329;
+    margin: 12px 0;
+}
+
+.gallery-heading p {
+    color: #8c7379;
+    font-size: 14px;
+}
+
+.gallery-divider {
+    width: 65px;
+    height: 2px;
+    background: #d7a54c;
+    margin: 20px auto;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* IMAGE CARD */
+
+.gallery-item {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #f0dfce;
+    box-shadow: 0 8px 25px rgba(88, 54, 34, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(88, 54, 34, 0.13);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* HIDDEN IMAGES */
+
+.gallery-item.hidden {
+    display: none;
+}
+
+/* LOAD MORE BUTTON */
+
+.gallery-load-more {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.gallery-load-more button {
+    background: #a51d60;
+    color: white;
+    border: 1px solid #a51d60;
+    padding: 14px 35px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.gallery-load-more button:hover {
+    background: #fff;
+    color: #a51d60;
+}
+
+/* FOOTER */
+
+.gallery-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.gallery-footer p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #302329;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 55px 18px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 32px;
+    }
+
+    .gallery-heading p {
+        font-size: 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-item {
+        height: 180px;
+        border-radius: 9px;
+    }
+
+    .gallery-load-more {
+        margin-top: 30px;
+    }
+
+    .gallery-footer p {
+        font-size: 16px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .gallery-grid {
+        gap: 9px;
+    }
+
+    .gallery-item {
+        height: 145px;
+    }
+}
+
+
+/* WEDDING BLESSINGS SECTION */
+
+.blessings-section {
+    background: #fbf6f1;
+    padding: 65px 20px 75px;
+    text-align: center;
+    margin-top: -150px;
+}
+
+.blessings-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Decorative Heart */
+
+.blessings-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.blessings-decoration span {
+    width: 65px;
+    height: 1px;
+    background: #d7a54c;
+}
+
+.blessings-decoration i {
+    color: #b51e67;
+    font-size: 18px;
+    font-style: normal;
+}
+
+/* Main Message */
+
+.blessings-content p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-style: italic;
+    color: #302329;
+    margin-bottom: 18px;
+}
+
+/* Divider */
+
+.blessings-divider {
+    width: 55px;
+    height: 2px;
+    background: #d7a54c;
+    margin: 0 auto 20px;
+}
+
+/* Subtitle */
+
+.blessings-content > span {
+    display: block;
+    color: #a66a24;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+/* Heart */
+
+.blessings-heart {
+    color: #b51e67;
+    font-size: 19px;
+    margin-top: 22px;
+}
+
+/* Couple Names */
+
+.blessings-content h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: #82747a;
+    margin-top: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .blessings-section {
+        padding: 50px 18px 55px;
+    }
+
+    .blessings-content p {
+        font-size: 29px;
+    }
+
+    .blessings-content > span {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .blessings-decoration span {
+        width: 45px;
+    }
+}
+
+/* bubbles */
+
+/* FLOATING LOVE BUBBLES */
+
+#love-bubbles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.love-bubble {
+    position: absolute;
+    bottom: -40px;
+    opacity: 0;
+    color: #b51e67;
+    font-family: Georgia, serif;
+    user-select: none;
+    will-change: transform, opacity;
+
+    animation: floatLove linear forwards;
+}
+
+/* Floating animation */
+
+@keyframes floatLove {
+
+    0% {
+        transform: translate3d(0, 0, 0)
+                   rotate(0deg) scale(0.7);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: var(--bubble-opacity);
+    }
+
+    85% {
+        opacity: var(--bubble-opacity);
+    }
+
+    100% {
+        transform:
+            translate3d(var(--drift), -110vh, 0)
+            rotate(var(--rotation))
+            scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .love-bubble {
+        font-size: 12px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .love-bubble {
+        animation: none;
+        display: none;
+    }
+}
