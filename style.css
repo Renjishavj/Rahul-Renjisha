@@ -1,11 +1,17 @@
-
 /* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --champagne-gradient: linear-gradient(
+        135deg,
+        #F5DDAA 0%,
+        #E8C477 50%,
+        #D9AD61 100%
+    );
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #171713;
@@ -26,10 +32,8 @@ body {
     color: white;
 
     background:
-        linear-gradient(
-            rgba(16, 19, 13, 0.38),
-            rgba(16, 19, 13, 0.43)
-        ),
+        linear-gradient(rgba(16, 19, 13, 0.38),
+            rgba(16, 19, 13, 0.43)),
         url("./cover.jpeg") center 42% / cover no-repeat;
 }
 
@@ -263,6 +267,7 @@ h1 {
         font-size: 25px;
     }
 }
+
 @media (max-width: 992px) {
     .hero {
         height: 650px;
@@ -455,7 +460,7 @@ h1 {
     box-shadow: 0 12px 35px rgba(88, 54, 34, 0.07);
 
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .person-card:hover {
@@ -721,13 +726,11 @@ h1 {
     width: 5px;
     transform: translateX(-50%);
 
-    background: repeating-linear-gradient(
-        to bottom,
-        #d7a54c 0px,
-        #d7a54c 12px,
-        transparent 12px,
-        transparent 22px
-    );
+    background: repeating-linear-gradient(to bottom,
+            #d7a54c 0px,
+            #d7a54c 12px,
+            transparent 12px,
+            transparent 22px);
 
     transform-origin: top;
     animation: roadDraw 4s ease forwards;
@@ -865,7 +868,9 @@ h1 {
 }
 
 @keyframes pinPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 0 0 rgba(165, 29, 96, 0.15);
     }
 
@@ -952,6 +957,7 @@ h1 {
 /* Reduce motion for accessibility */
 
 @media (prefers-reduced-motion: reduce) {
+
     .journey-map::before,
     .journey-card,
     .journey-pin {
@@ -1079,8 +1085,7 @@ h1 {
     transition: transform 0.5s ease;
 }
 
-.wedding-itinerary-card:hover
-.wedding-itinerary-image img {
+.wedding-itinerary-card:hover .wedding-itinerary-image img {
     transform: scale(1.06);
 }
 
@@ -1125,7 +1130,7 @@ h1 {
     align-items: center;
 }
 
-.wedding-itinerary-qr > div {
+.wedding-itinerary-qr>div {
     width: 105px;
     height: 105px;
     padding: 5px;
@@ -1267,7 +1272,7 @@ h1 {
 }
 
 .gallery-heading h2 {
-     font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 42px;
     color: #302329;
     margin: 12px 0;
@@ -1488,7 +1493,7 @@ h1 {
 
 /* Subtitle */
 
-.blessings-content > span {
+.blessings-content>span {
     display: block;
     color: #a66a24;
     font-size: 11px;
@@ -1528,7 +1533,7 @@ h1 {
         font-size: 29px;
     }
 
-    .blessings-content > span {
+    .blessings-content>span {
         font-size: 9px;
         letter-spacing: 2px;
     }
@@ -1569,8 +1574,7 @@ h1 {
 @keyframes floatLove {
 
     0% {
-        transform: translate3d(0, 0, 0)
-                   rotate(0deg) scale(0.7);
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(0.7);
         opacity: 0;
     }
 
@@ -1584,9 +1588,7 @@ h1 {
 
     100% {
         transform:
-            translate3d(var(--drift), -110vh, 0)
-            rotate(var(--rotation))
-            scale(1.2);
+            translate3d(var(--drift), -110vh, 0) rotate(var(--rotation)) scale(1.2);
         opacity: 0;
     }
 }
@@ -1607,3 +1609,364 @@ h1 {
         display: none;
     }
 }
+
+/* opening page */
+
+body.invitation-locked {
+    overflow: hidden;
+}
+
+
+
+/* SAGE GREEN INVITATION WINDOW */
+
+body.invitation-locked {
+    overflow: hidden;
+}
+
+.invitation-gate {
+    --coral: #ff8068;
+    --gold: #e6c16c;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    padding: 30px 18px;
+
+    background:url("./Elegant\ Magenta\ Marbled\ Waves.webp");
+    color: #e8eadf;
+
+    transition: opacity .9s ease, visibility .9s ease;
+}
+
+.invitation-gate::before {
+    content: none;
+}
+.opening-content {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    text-align: center;
+    padding: 28px 12px;
+    animation: openingContentIn 1.2s ease both;
+}
+
+@keyframes openingContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.opening-kicker {
+    margin-bottom: 54px;
+    color: rgba(232, 234, 223, .68);
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.opening-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opening-day {
+    font-family: Georgia, serif;
+    font-size: clamp(82px, 11vw, 118px);
+    line-height: .9;
+    letter-spacing: -5px;
+    color: #edf0e6;
+}
+
+.opening-month {
+    margin-top: 14px;
+    color: rgba(232, 234, 223, .7);
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.opening-divider {
+    width: 66px;
+    height: 1px;
+    background: var(--coral);
+    margin: 31px auto 25px;
+}
+
+/* COUNTDOWN */
+
+.opening-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 31px;
+}
+
+.opening-time-box {
+    width: 72px;
+    height: 78px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    border-radius: 15px;
+    background: rgba(80, 10, 38, 0.45);
+    border: 1px solid rgba(255, 255, 255, .045);
+    backdrop-filter: blur(7px);
+
+    transition: transform .3s ease;
+}
+
+.opening-time-box:hover {
+    transform: translateY(-5px);
+}
+
+.opening-time-box strong {
+    color: #edf0e6;
+    font-size: 25px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.opening-time-box span {
+    color: rgba(232, 234, 223, .68);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* COUPLE NAMES */
+
+.opening-couple-names {
+    margin: 0;
+    color: #edf0e6;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(42px, 6.2vw, 70px);
+    line-height: 1.2;
+    font-weight: 400;
+    white-space: nowrap;
+}
+.couple-names .ampersand {
+    color: var(--champagne) !important;
+}
+.opening-couple-names span {
+    color: var(--coral);
+    font-style: italic;
+    padding: 0 8px;
+}
+
+/* BOTANICAL */
+
+
+.opening-botanical {
+    width: 260px;
+    max-width: 85%;
+    margin: 15px auto 25px;
+    margin-top: 30px;
+}
+
+.opening-botanical svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+
+.opening-botanical svg path {
+    stroke: url(#champagneSvg) !important;
+    fill: none !important;
+}
+
+.opening-botanical path:not(:first-child) {
+    animation: leafSway 3.5s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes leafSway {
+    from {
+        opacity: .65;
+        transform: rotate(-2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(2deg);
+    }
+}
+
+/* OPEN BUTTON */
+.amb{
+    background: var(--champagne-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.open-invitation-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    min-width: 276px;
+    padding: 21px 30px;
+
+   
+    border-radius: 999px;
+
+   
+  background: linear-gradient(
+        135deg,
+        #F5DDAA 0%,
+        #E8C477 50%,
+        #D9AD61 100%
+    ) !important;
+
+    color: #68132F;
+    border: 1px solid #F7E2B5 !important;
+    box-shadow: 0 5px 20px rgba(30, 5, 15, 0.18);
+   
+
+    font: 700 13px Arial, sans-serif;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.open-invitation-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #FFF0CE,
+        #E8C477
+    ) !important;
+
+    transform: translateY(-3px);
+}
+
+.open-arrow {
+    font-size: 21px;
+    transition: transform .3s ease;
+}
+
+.open-invitation-btn:hover .open-arrow {
+    
+
+    transform: translateY(-3px);
+}
+
+
+
+
+/* OPENING TRANSITION */
+
+.invitation-gate--opening {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .invitation-gate {
+        background-position: 52% center;
+        padding: 20px 14px;
+    }
+
+    .opening-kicker {
+        margin-bottom: 38px;
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .opening-day {
+        font-size: 88px;
+    }
+
+    .opening-month {
+        font-size: 10px;
+        letter-spacing: 2.3px;
+    }
+
+    .opening-countdown {
+        gap: 7px;
+        margin-bottom: 29px;
+    }
+
+    .opening-time-box {
+        width: 62px;
+        height: 68px;
+    }
+
+    .opening-time-box strong {
+        font-size: 21px;
+    }
+
+    .opening-time-box span {
+        font-size: 8px;
+    }
+
+    .opening-couple-names {
+        font-size: clamp(34px, 8vw, 48px);
+        white-space: normal;
+    }
+
+    .opening-couple-names span {
+        padding: 0 3px;
+    }
+
+    .open-invitation-btn {
+        min-width: 235px;
+        padding: 18px 24px;
+        font-size: 11px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .gate-butterfly,
+    .gate-floating-particle,
+    .opening-content,
+    .opening-botanical path {
+        animation: none !important;
+    }
+}
+
+/* =================================
+   FLYING BUTTERFLIES
+================================= */
+
+/* =================================
+   NATURAL FLYING BUTTERFLIES
+================================= */
+
+.butterfly-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+/* Natural wing flapping */

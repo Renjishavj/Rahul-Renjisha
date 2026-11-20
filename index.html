@@ -9,8 +9,120 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div id="love-bubbles" aria-hidden="true"></div>
+<body class="invitation-locked">
+
+    <!-- Wedding invitation opening screen -->
+
+
+    <section class="invitation-gate" id="invitationGate">
+
+
+
+        <div class="opening-content">
+
+            <p class="opening-kicker">SAVE THE DATE</p>
+
+            <div class="opening-date">
+                <span class="opening-day">31</span>
+                <span class="opening-month">JANUARY 2027 · SUNDAY</span>
+            </div>
+
+            <div class="opening-divider"></div>
+
+            <!-- Countdown -->
+            <div class="opening-countdown" id="openingCountdown">
+
+                <div class="opening-time-box">
+                    <strong id="openingDays">000</strong>
+                    <span>DAYS</span>
+                </div>
+
+                <div class="opening-time-box">
+                    <strong id="openingHours">00</strong>
+                    <span>HOURS</span>
+                </div>
+
+                <div class="opening-time-box">
+                    <strong id="openingMinutes">00</strong>
+                    <span>MIN</span>
+                </div>
+
+                <div class="opening-time-box">
+                    <strong id="openingSeconds">00</strong>
+                    <span>SEC</span>
+                </div>
+
+            </div>
+
+            <h1 class="opening-couple-names">
+                Rahul <span class="amb">&</span> Renjisha
+            </h1>
+
+            <!-- Botanical decoration -->
+
+<div class="opening-botanical">
+    <svg viewBox="0 0 260 48" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+            <linearGradient
+                id="champagneSvg"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+            >
+                <stop offset="0%" stop-color="#F5DDAA"/>
+                <stop offset="50%" stop-color="#E8C477"/>
+                <stop offset="100%" stop-color="#D9AD61"/>
+            </linearGradient>
+        </defs>
+
+        <g
+            fill="none"
+            stroke="url(#champagneSvg)"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <!-- Main curved branch -->
+            <path d="M8 36 C54 2 206 2 252 36" />
+
+            <!-- Left leaves -->
+            <path d="M25 27 C18 16 12 14 8 13 C10 23 16 28 25 27Z" />
+            <path d="M48 17 C43 7 37 5 32 5 C35 15 40 19 48 17Z" />
+            <path d="M72 10 C68 1 62 0 57 1 C60 10 65 13 72 10Z" />
+            <path d="M96 7 C94 0 89 -1 84 0 C86 7 90 10 96 7Z" />
+
+            <!-- Right leaves -->
+            <path d="M235 27 C242 16 248 14 252 13 C250 23 244 28 235 27Z" />
+            <path d="M212 17 C217 7 223 5 228 5 C225 15 220 19 212 17Z" />
+            <path d="M188 10 C192 1 198 0 203 1 C200 10 195 13 188 10Z" />
+            <path d="M164 7 C166 0 171 -1 176 0 C174 7 170 10 164 7Z" />
+
+            <!-- Centre leaf -->
+            <path d="M130 4 C122 14 121 22 130 30 C139 22 138 14 130 4Z" />
+
+        </g>
+    </svg>
+</div>
+
+
+
+
+
+
+            <button class="open-invitation-btn" id="openInvitation">
+                <span>OPEN INVITATION</span>
+                <span class="open-arrow">→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <div id="love-bubbles" aria-hidden="true"></div>
     <section class="hero" id="home">
 
         <!-- Navbar -->
@@ -45,42 +157,6 @@
             <p class="wedding-date">
                 Are Getting Married · January 31, 2027
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="countdown" id="countdown">
-
-                <div class="time-box">
-                    <span id="days">000</span>
-                    <small>Days</small>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="time-box">
-                    <span id="hours">00</span>
-                    <small>Hours</small>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="time-box">
-                    <span id="minutes">00</span>
-                    <small>Minutes</small>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="time-box">
-                    <span id="seconds">00</span>
-                    <small>Seconds</small>
-                </div>
-
-            </div>
-
-            <p class="message" id="countdown-message">
-                Counting down to our forever
-            </p>
-
         </div>
 
     </section>
@@ -428,7 +504,7 @@
                     </div>
 
                     <!-- Footer Message -->
-                    
+
 
                 </div>
 
@@ -437,209 +513,34 @@
 
         </div>
 
-       
+
 
     </section>
 
-<section class="blessings-section">
-    <div class="blessings-content">
+    <section class="blessings-section">
+        <div class="blessings-content">
 
-        <div class="blessings-decoration">
-            <span></span>
-            <i>♥</i>
-            <span></span>
+            <div class="blessings-decoration">
+                <span></span>
+                <i>♥</i>
+                <span></span>
+            </div>
+
+            <p>With Love & Blessings</p>
+
+            <div class="blessings-divider"></div>
+
+            <span>
+                WE LOOK FORWARD TO CELEBRATING WITH YOU
+            </span>
+
+            <div class="blessings-heart">♥</div>
+
+            <h3>Rahul & Renjisha</h3>
+
         </div>
-
-        <p>With Love & Blessings</p>
-
-        <div class="blessings-divider"></div>
-
-        <span>
-            WE LOOK FORWARD TO CELEBRATING WITH YOU
-        </span>
-
-        <div class="blessings-heart">♥</div>
-
-        <h3>Rahul  &  Renjisha</h3>
-
-    </div>
-</section>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Countdown JavaScript -->
-    <script>
-        // Wedding date: January 31, 2027, 10:05 AM IST
-        const weddingDate = new Date(
-            "2027-01-31T10:05:00+05:30"
-        ).getTime();
-
-        const timer = setInterval(function () {
-
-            const now = new Date().getTime();
-            const difference = weddingDate - now;
-
-            if (difference <= 0) {
-
-                clearInterval(timer);
-
-                document.getElementById("countdown").innerHTML =
-                    "<p>Today is the day! Rahul & Renjisha are getting married ❤️</p>";
-
-                document.getElementById("countdown-message").textContent =
-                    "A beautiful beginning starts today";
-
-                return;
-            }
-
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
-
-            const hours = Math.floor(
-                (difference / (1000 * 60 * 60)) % 24
-            );
-
-            const minutes = Math.floor(
-                (difference / (1000 * 60)) % 60
-            );
-
-            const seconds = Math.floor(
-                (difference / 1000) % 60
-            );
-
-            document.getElementById("days").textContent =
-                String(days).padStart(3, "0");
-
-            document.getElementById("hours").textContent =
-                String(hours).padStart(2, "0");
-
-            document.getElementById("minutes").textContent =
-                String(minutes).padStart(2, "0");
-
-            document.getElementById("seconds").textContent =
-                String(seconds).padStart(2, "0");
-
-        }, 1000);
-
-
-
-
-        // GALLERY LOAD MORE FUNCTIONALITY
-
-        const loadMoreBtn = document.getElementById("loadMoreBtn");
-
-        loadMoreBtn.addEventListener("click", function () {
-
-            const hiddenImages = document.querySelectorAll(
-                ".gallery-item.hidden"
-            );
-
-            hiddenImages.forEach(function (image) {
-                image.classList.remove("hidden");
-            });
-
-            loadMoreBtn.style.display = "none";
-
-        });
-
-
-
-        // bubles
-
-
-// FLOATING LOVE BUBBLES
-
-const loveContainer = document.getElementById("love-bubbles");
-
-const loveSymbols = ["♥", "♡", "❤"];
-
-const loveColors = [
-    "#b51e67",  // Rose pink
-    "#d7a54c",  // Gold
-    "#e8a2ba",  // Soft pink
-    "#a51d60"   // Dark pink
-];
-
-function createLoveBubble() {
-
-    if (!loveContainer) return;
-
-    const bubble = document.createElement("span");
-
-    bubble.classList.add("love-bubble");
-
-    // Random heart
-    bubble.textContent =
-        loveSymbols[Math.floor(Math.random() * loveSymbols.length)];
-
-    // Random position
-    bubble.style.left = Math.random() * 100 + "%";
-
-    // Random size
-    bubble.style.fontSize =
-        (10 + Math.random() * 14) + "px";
-
-    // Random color
-    bubble.style.color =
-        loveColors[Math.floor(Math.random() * loveColors.length)];
-
-    // Random animation duration
-    const duration = 9 + Math.random() * 9;
-
-    bubble.style.animationDuration = duration + "s";
-
-    // Horizontal movement
-    bubble.style.setProperty(
-        "--drift",
-        (Math.random() * 160 - 80) + "px"
-    );
-
-    // Rotation
-    bubble.style.setProperty(
-        "--rotation",
-        (Math.random() * 90 - 45) + "deg"
-    );
-
-    // Transparency
-    bubble.style.setProperty(
-        "--bubble-opacity",
-        (0.2 + Math.random() * 0.3).toString()
-    );
-
-    loveContainer.appendChild(bubble);
-
-    // Remove after animation
-    bubble.addEventListener("animationend", () => {
-        bubble.remove();
-    });
-}
-
-    // Create more hearts continuously
-if (
-    loveContainer &&
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-) {
-    setInterval(() => {
-        for (let i = 0; i < 5; i++) {
-            createLoveBubble();
-        }
-    }, 600);
-}
-
-    </script>
+    </section>
+    <script src="./script.js"></script>
 
 </body>
 
