@@ -1969,4 +1969,163 @@ body.invitation-locked {
 }
 
 
-/* Natural wing flapping */
+
+/* =====================================
+   GLOWING ROMANTIC HEART ANIMATION
+===================================== */
+
+.gate-love-bubbles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Common floating element */
+.love-effect {
+    position: absolute;
+    bottom: -50px;
+    left: var(--start-x);
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation: romanticHeartRise var(--duration) linear forwards;
+}
+
+/* Large outline hearts */
+.love-outline {
+    font-family: Arial, sans-serif;
+    font-size: var(--size);
+    font-weight: 300;
+    line-height: 1;
+
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--heart-color);
+
+    text-shadow:
+        0 0 5px var(--heart-color),
+        0 0 12px var(--heart-glow),
+        0 0 22px var(--heart-glow);
+}
+
+/* Solid floating hearts */
+.love-solid {
+    font-size: var(--size);
+    line-height: 1;
+    color: var(--heart-color);
+
+    text-shadow:
+        0 0 5px var(--heart-color),
+        0 0 12px var(--heart-glow),
+        0 0 24px var(--heart-glow);
+}
+
+/* Small glowing background particles */
+.love-particle {
+    position: absolute;
+    left: var(--start-x);
+    bottom: -20px;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+
+    background: var(--heart-color);
+
+    box-shadow:
+        0 0 5px var(--heart-color),
+        0 0 12px var(--heart-glow),
+        0 0 22px var(--heart-glow);
+
+    opacity: 0;
+    animation: particleRise var(--duration) linear forwards;
+}
+
+/* Heart movement */
+@keyframes romanticHeartRise {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-12deg) scale(.7);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: var(--opacity);
+    }
+
+    35% {
+        transform: translate3d(
+            var(--drift-one),
+            -30vh,
+            0
+        ) rotate(8deg) scale(1);
+    }
+
+    65% {
+        transform: translate3d(
+            var(--drift-two),
+            -65vh,
+            0
+        ) rotate(-8deg) scale(1.1);
+    }
+
+    85% {
+        opacity: var(--opacity);
+    }
+
+    100% {
+        transform: translate3d(
+            var(--drift-three),
+            -115vh,
+            0
+        ) rotate(18deg) scale(1.15);
+
+        opacity: 0;
+    }
+}
+
+/* Particle movement */
+@keyframes particleRise {
+    0% {
+        transform: translate3d(0, 0, 0) scale(.5);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: var(--opacity);
+    }
+
+    80% {
+        opacity: var(--opacity);
+    }
+
+    100% {
+        transform: translate3d(
+            var(--drift-three),
+            -115vh,
+            0
+        ) scale(1.4);
+
+        opacity: 0;
+    }
+}
+
+/* Main content must remain above animation */
+.opening-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .love-outline {
+        -webkit-text-stroke-width: 1px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .love-effect,
+    .love-particle {
+        display: none !important;
+    }
+}
