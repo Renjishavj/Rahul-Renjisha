@@ -677,7 +677,7 @@ h1 {
     background: #fbf6f1;
     padding: 80px 20px;
     overflow: hidden;
-    margin-top: -100px;
+    margin-top: -50px;
 }
 
 /* Heading */
@@ -1550,45 +1550,44 @@ h1 {
 #love-bubbles {
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
     overflow: hidden;
+    pointer-events: none;
     z-index: 10;
 }
 
 .love-bubble {
     position: absolute;
-    bottom: -40px;
+    display: block;
+    line-height: 1;
     opacity: 0;
-    color: #b51e67;
-    font-family: Georgia, serif;
-    user-select: none;
-    will-change: transform, opacity;
 
-    animation: floatLove linear forwards;
+    animation: randomLoveMovement
+        var(--bubble-duration, 10s)
+        ease-in-out forwards;
 }
 
 /* Floating animation */
 
-@keyframes floatLove {
 
+@keyframes randomLoveMovement {
     0% {
-        transform: translate3d(0, 0, 0) rotate(0deg) scale(0.7);
+        transform: translate(0, 0) scale(.6) rotate(0deg);
         opacity: 0;
     }
 
     15% {
-        opacity: var(--bubble-opacity);
+        opacity: var(--bubble-opacity, .3);
     }
 
-    85% {
-        opacity: var(--bubble-opacity);
+    75% {
+        opacity: var(--bubble-opacity, .3);
     }
 
     100% {
         transform:
-            translate3d(var(--drift), -110vh, 0) rotate(var(--rotation)) scale(1.2);
+            translate(var(--move-x), var(--move-y))
+            scale(1.2)
+            rotate(var(--rotation));
         opacity: 0;
     }
 }

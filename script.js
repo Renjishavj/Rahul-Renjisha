@@ -16,74 +16,88 @@ loadMoreBtn.addEventListener("click", function () {
 
 // FLOATING LOVE BUBBLES
 
+/* =====================================
+   MAIN PAGE - RANDOM FLOATING LOVE BUBBLES
+===================================== */
+
+
+/* RANDOM FLOATING LOVE BUBBLES */
+
 const loveContainer = document.getElementById("love-bubbles");
 
 const loveSymbols = ["♥", "♡", "❤"];
 
 const loveColors = [
-  "#b51e67", // Rose pink
-  "#d7a54c", // Gold
-  "#e8a2ba", // Soft pink
-  "#a51d60", // Dark pink
+    "#b51e67",
+    "#d7a54c",
+    "#e8a2ba",
+    "#a51d60"
 ];
 
 function createLoveBubble() {
-  if (!loveContainer) return;
+    if (!loveContainer) return;
 
-  const bubble = document.createElement("span");
+    const bubble = document.createElement("span");
+    bubble.classList.add("love-bubble");
 
-  bubble.classList.add("love-bubble");
+    bubble.textContent =
+        loveSymbols[Math.floor(Math.random() * loveSymbols.length)];
 
-  // Random heart
-  bubble.textContent =
-    loveSymbols[Math.floor(Math.random() * loveSymbols.length)];
+    // Random position anywhere on screen
+    bubble.style.left = Math.random() * 95 + "%";
+    bubble.style.top = Math.random() * 95 + "%";
 
-  // Random position
-  bubble.style.left = Math.random() * 100 + "%";
+    // Random size and colour
+    bubble.style.fontSize = (10 + Math.random() * 18) + "px";
 
-  // Random size
-  bubble.style.fontSize = 10 + Math.random() * 14 + "px";
+    bubble.style.color =
+        loveColors[Math.floor(Math.random() * loveColors.length)];
 
-  // Random color
-  bubble.style.color =
-    loveColors[Math.floor(Math.random() * loveColors.length)];
+    // Random animation speed
+    const duration = 7 + Math.random() * 8;
+    bubble.style.animationDuration = duration + "s";
 
-  // Random animation duration
-  const duration = 9 + Math.random() * 9;
+    // Random movement in every direction
+    bubble.style.setProperty("--move-x", (Math.random() * 300 - 150) + "px");
+    bubble.style.setProperty("--move-y", (Math.random() * 300 - 150) + "px");
 
-  bubble.style.animationDuration = duration + "s";
+    bubble.style.setProperty(
+        "--rotation",
+        (Math.random() * 180 - 90) + "deg"
+    );
 
-  // Horizontal movement
-  bubble.style.setProperty("--drift", Math.random() * 160 - 80 + "px");
+    bubble.style.setProperty(
+        "--bubble-opacity",
+        0.2 + Math.random() * 0.4
+    );
 
-  // Rotation
-  bubble.style.setProperty("--rotation", Math.random() * 90 - 45 + "deg");
+    loveContainer.appendChild(bubble);
 
-  // Transparency
-  bubble.style.setProperty(
-    "--bubble-opacity",
-    (0.2 + Math.random() * 0.3).toString(),
-  );
-
-  loveContainer.appendChild(bubble);
-
-  // Remove after animation
-  bubble.addEventListener("animationend", () => {
-    bubble.remove();
-  });
+    bubble.addEventListener("animationend", () => {
+        bubble.remove();
+    }, { once: true });
 }
 
-// Create more hearts continuously
+// Generate bubbles across the page
 if (
-  loveContainer &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    loveContainer &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 ) {
-  setInterval(() => {
-    for (let i = 0; i < 5; i++) {
-      createLoveBubble();
+    // Initial bubbles
+    for (let i = 0; i < 8; i++) {
+        setTimeout(createLoveBubble, i * 250);
     }
-  }, 600);
+
+    // Gradually add new bubbles
+    setInterval(createLoveBubble, 900);
 }
+
+
+
+
+
+
+
 
 // Open the invitation and reveal the existing wedding website.
 const invitationGate = document.getElementById("invitationGate");
