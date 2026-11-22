@@ -2128,3 +2128,185 @@ body.invitation-locked {
         display: none !important;
     }
 }
+
+
+
+/* =====================================
+   CINEMATIC WEDDING PAGE TRANSITION
+===================================== */
+
+/* Opening invitation zooms out and disappears */
+
+.invitation-gate--opening {
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: scale(1.06);
+    filter: blur(5px);
+
+    transition:
+        opacity 1s ease,
+        transform 1.1s cubic-bezier(0.65, 0, 0.35, 1),
+        filter 1s ease,
+        visibility 1s ease;
+}
+
+
+/* =====================================
+   MAIN HERO REVEAL
+===================================== */
+
+body.main-page-revealing .hero {
+
+    animation: weddingHeroReveal 1.5s
+        cubic-bezier(0.22, 1, 0.36, 1) both;
+
+}
+
+@keyframes weddingHeroReveal {
+
+    0% {
+
+        opacity: 0;
+        transform: scale(1.08);
+        filter: blur(8px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+
+    }
+
+}
+
+
+/* =====================================
+   HERO CONTENT REVEAL
+===================================== */
+
+body.main-page-revealing .hero-content {
+
+    animation: heroTextReveal 1.3s ease 0.35s both;
+
+}
+
+body.main-page-revealing .navbar {
+
+    animation: navbarReveal 1s ease 0.5s both;
+
+}
+
+@keyframes heroTextReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes navbarReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(-20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+   OTHER SECTIONS REVEAL
+===================================== */
+
+body.main-page-revealing .love-story {
+
+    animation: sectionReveal 1s ease 0.5s both;
+
+}
+
+body.main-page-revealing .journey-section {
+
+    animation: sectionReveal 1s ease 0.7s both;
+
+}
+
+body.main-page-revealing .wedding-itinerary-section {
+
+    animation: sectionReveal 1s ease 0.9s both;
+
+}
+
+body.main-page-revealing .blessings-section {
+
+    animation: sectionReveal 1s ease 1.1s both;
+
+}
+
+@keyframes sectionReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body.main-page-revealing .hero,
+    body.main-page-revealing .hero-content,
+    body.main-page-revealing .navbar,
+    body.main-page-revealing .love-story,
+    body.main-page-revealing .journey-section,
+    body.main-page-revealing .wedding-itinerary-section,
+    body.main-page-revealing .blessings-section {
+
+        animation: none !important;
+
+    }
+
+    .invitation-gate--opening {
+
+        transition: none;
+
+    }
+
+}
+

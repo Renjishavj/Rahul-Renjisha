@@ -99,23 +99,39 @@ if (
 
 
 
-// Open the invitation and reveal the existing wedding website.
+
+// Open invitation with cinematic transition
+
 const invitationGate = document.getElementById("invitationGate");
 const openInvitationButton = document.getElementById("openInvitation");
 
 if (openInvitationButton && invitationGate) {
-  openInvitationButton.addEventListener("click", () => {
-    invitationGate.classList.add("invitation-gate--opening");
-    document.body.classList.remove("invitation-locked");
 
-    window.setTimeout(() => {
-      invitationGate.remove();
-      document.getElementById("home")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 850);
-  });
+    openInvitationButton.addEventListener("click", () => {
+
+        // Start main page reveal
+        document.body.classList.add("main-page-revealing");
+
+        // Start invitation closing animation
+        invitationGate.classList.add("invitation-gate--opening");
+
+        // Unlock scrolling
+        document.body.classList.remove("invitation-locked");
+
+        // Remove opening screen after transition
+        window.setTimeout(() => {
+
+            invitationGate.remove();
+
+            document.getElementById("home")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 1100);
+
+    });
+
 }
 
 
