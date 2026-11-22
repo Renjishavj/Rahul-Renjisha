@@ -4444,3 +4444,79 @@ body.main-page-revealing .blessings-section {
     }
 
 }
+
+
+
+/* =====================================
+   REMOVE EXCESS SPACE AFTER HERO
+===================================== */
+
+@media (max-width: 650px) {
+
+    /* Let banner height depend on its content */
+    .editorial-hero {
+        min-height: auto !important;
+        height: auto !important;
+
+        padding-bottom: 15px !important;
+    }
+
+    /* Reduce space below the photographs */
+    .editorial-gallery {
+        margin-bottom: 0 !important;
+    }
+
+    /* Reduce top spacing of next section */
+    .love-story {
+        margin-top: 0 !important;
+        padding-top: 25px !important;
+    }
+
+}
+
+/* Remove unwanted line between banner and Love Story */
+.editorial-hero {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.love-story {
+    border-top: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =====================================
+   REMOVE HERO / LOVE STORY DIVIDER
+===================================== */
+
+@media (max-width: 650px) {
+
+    #home.editorial-hero,
+    .editorial-hero {
+        border: none !important;
+        border-bottom: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    #home.editorial-hero::before,
+    #home.editorial-hero::after,
+    .love-story::before,
+    .love-story::after {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .love-story {
+        border: none !important;
+        border-top: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+
+        margin-top: 0 !important;
+
+        background: #F8F7F3 !important;
+    }
+
+}
