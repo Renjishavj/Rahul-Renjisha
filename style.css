@@ -18,81 +18,8 @@ body {
 }
 
 /* Main Wedding Banner */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    overflow: hidden;
-    color: white;
-
-    background:
-        linear-gradient(rgba(16, 19, 13, 0.38),
-            rgba(16, 19, 13, 0.43)),
-        url("./cover.jpeg") center 42% / cover no-repeat;
-}
-
-/* Navbar */
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    padding: 25px 7%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 24px;
-    z-index: 2;
-}
-
-/* Logo */
-.logo {
-    color: white;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 27px;
-    font-style: italic;
-    letter-spacing: 1px;
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    opacity: 0.7;
-}
-
-/* Navbar Button */
-.nav-button {
-    color: white;
-    background: #a33b82;
-
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 3px;
-
-    font-size: 13px;
-}
 
 /* Main Content */
 .hero-content {
@@ -2239,6 +2166,539 @@ body.main-page-revealing .navbar {
 }
 
 
+/* =========================================
+   EDITORIAL LUXURY WEDDING BANNER
+========================================= */
+
+.editorial-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    height: auto;
+
+    padding: 105px 4% 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F8F7F3 !important;
+
+    color: #302D2D;
+
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.editorial-hero .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 20px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+.editorial-hero .logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.editorial-hero .nav-links a {
+    color: #454040;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.editorial-hero .nav-links a:hover {
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-button {
+    background: transparent;
+    color: #454040;
+    border: 1px solid #D7C6A3;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.editorial-heading {
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+
+    margin: 0 auto 30px;
+
+    padding-top: 0;
+
+    animation: editorialFadeIn 1.2s ease both;
+}
+
+.editorial-monogram {
+    color: #B58C4A;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    font-style: italic;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.editorial-heading h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6.5vw, 85px);
+
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: #302D2D;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+.heading-line {
+    display: block;
+
+    width: clamp(25px, 5vw, 65px);
+    height: 5px;
+
+    background: #302D2D;
+}
+
+.editorial-amp {
+    color: #B58C4A;
+    font-style: italic;
+}
+
+.editorial-subtitle {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #817875;
+
+    margin-top: 18px;
+}
+
+.editorial-date {
+    font-family: Georgia, serif;
+
+    font-size: clamp(19px, 2.5vw, 26px);
+
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #454040;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   THREE IMAGE GALLERY
+========================================= */
+
+.editorial-gallery {
+
+    width: 100%;
+    max-width: 1450px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px auto 0;
+
+}
+
+
+/* Common Image Styling */
+
+.editorial-image {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #E9E3DA;
+
+}
+
+.editorial-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+.editorial-image:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Left Image */
+
+.editorial-left {
+
+    height: 340px;
+
+}
+
+
+/* Centre Image */
+
+.editorial-center {
+
+    height: 410px;
+
+}
+
+
+/* Right Image */
+
+.editorial-right {
+
+    height: 340px;
+
+}
+
+
+/* =========================================
+   ENTRANCE ANIMATION
+========================================= */
+
+@keyframes editorialFadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.editorial-image {
+
+    animation: editorialPhotoReveal 1.2s ease both;
+
+}
+
+.editorial-left {
+    animation-delay: .2s;
+}
+
+.editorial-center {
+    animation-delay: .45s;
+}
+
+.editorial-right {
+    animation-delay: .7s;
+}
+
+@keyframes editorialPhotoReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .editorial-hero {
+
+        padding: 120px 3% 45px;
+
+    }
+
+    .editorial-gallery {
+
+        gap: 12px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 270px;
+
+    }
+
+    .editorial-center {
+
+        height: 340px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .editorial-hero {
+
+        min-height: 100svh;
+
+        padding: 105px 15px 35px;
+
+    }
+
+    .editorial-hero .navbar {
+
+        padding: 15px 5%;
+
+    }
+
+    .editorial-hero .logo {
+
+        font-size: 19px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 13px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+    .editorial-hero .nav-button {
+
+        display: none;
+
+    }
+
+    .editorial-heading {
+
+        margin-bottom: 15px;
+
+    }
+
+    .editorial-monogram {
+
+        margin-bottom: 17px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: clamp(29px, 7.5vw, 46px);
+
+        gap: 7px;
+
+        white-space: normal;
+
+    }
+
+    .heading-line {
+
+        width: 18px;
+        height: 3px;
+
+    }
+
+    .editorial-subtitle {
+
+        font-size: 11px;
+
+        margin-top: 15px;
+
+    }
+
+    .editorial-date {
+
+        font-size: 19px;
+
+        letter-spacing: 2px;
+
+        margin-top: 25px;
+
+    }
+
+    .editorial-gallery {
+
+        grid-template-columns: 1fr 1.15fr 1fr;
+
+        gap: 7px;
+
+        margin-top: 22px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 210px;
+
+    }
+
+    .editorial-center {
+
+        height: 270px;
+
+    }
+
+    .editorial-image {
+
+        border-radius: 5px;
+
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .editorial-hero {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 9px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 9px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 175px;
+
+    }
+
+    .editorial-center {
+
+        height: 225px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .editorial-heading,
+    .editorial-image {
+
+        animation: none !important;
+
+    }
+
+    .editorial-image img {
+
+        transition: none;
+
+    }
+
+}
+
 /* =====================================
    OTHER SECTIONS REVEAL
 ===================================== */
@@ -2307,6 +2767,1680 @@ body.main-page-revealing .blessings-section {
         transition: none;
 
     }
+/* =========================================
+   EDITORIAL LUXURY WEDDING BANNER
+========================================= */
+
+.editorial-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    height: auto;
+
+    padding: 105px 4% 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F8F7F3 !important;
+
+    color: #302D2D;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.editorial-hero .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 20px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+.editorial-hero .logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.editorial-hero .nav-links a {
+    color: #454040;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.editorial-hero .nav-links a:hover {
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-button {
+    background: transparent;
+    color: #454040;
+    border: 1px solid #D7C6A3;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.editorial-heading {
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+
+    margin: 0 auto 30px;
+
+    padding-top: 0;
+
+    animation: editorialFadeIn 1.2s ease both;
+}
+
+.editorial-monogram {
+    color: #B58C4A;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    font-style: italic;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.editorial-heading h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6.5vw, 85px);
+
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: #302D2D;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+.heading-line {
+    display: block;
+
+    width: clamp(25px, 5vw, 65px);
+    height: 5px;
+
+    background: #302D2D;
+}
+
+.editorial-amp {
+    color: #B58C4A;
+    font-style: italic;
+}
+
+.editorial-subtitle {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #817875;
+
+    margin-top: 18px;
+}
+
+.editorial-date {
+    font-family: Georgia, serif;
+
+    font-size: clamp(19px, 2.5vw, 26px);
+
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #454040;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   THREE IMAGE GALLERY
+========================================= */
+
+.editorial-gallery {
+
+    width: 100%;
+    max-width: 1450px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px auto 0;
 
 }
 
+
+/* Common Image Styling */
+
+.editorial-image {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #E9E3DA;
+
+}
+
+.editorial-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+.editorial-image:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Left Image */
+
+.editorial-left {
+
+    height: 340px;
+
+}
+
+
+/* Centre Image */
+
+.editorial-center {
+
+    height: 410px;
+
+}
+
+
+/* Right Image */
+
+.editorial-right {
+
+    height: 340px;
+
+}
+
+
+/* =========================================
+   ENTRANCE ANIMATION
+========================================= */
+
+@keyframes editorialFadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.editorial-image {
+
+    animation: editorialPhotoReveal 1.2s ease both;
+
+}
+
+.editorial-left {
+    animation-delay: .2s;
+}
+
+.editorial-center {
+    animation-delay: .45s;
+}
+
+.editorial-right {
+    animation-delay: .7s;
+}
+
+@keyframes editorialPhotoReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .editorial-hero {
+
+        padding: 120px 3% 45px;
+
+    }
+
+    .editorial-gallery {
+
+        gap: 12px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 270px;
+
+    }
+
+    .editorial-center {
+
+        height: 340px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .editorial-hero {
+
+        min-height: 100svh;
+
+        padding: 105px 15px 35px;
+
+    }
+
+    .editorial-hero .navbar {
+
+        padding: 15px 5%;
+
+    }
+
+    .editorial-hero .logo {
+
+        font-size: 19px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 13px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+    .editorial-hero .nav-button {
+
+        display: none;
+
+    }
+
+    .editorial-heading {
+
+        margin-bottom: 15px;
+
+    }
+
+    .editorial-monogram {
+
+        margin-bottom: 17px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: clamp(29px, 7.5vw, 46px);
+
+        gap: 7px;
+
+        white-space: normal;
+
+    }
+
+    .heading-line {
+
+        width: 18px;
+        height: 3px;
+
+    }
+
+    .editorial-subtitle {
+
+        font-size: 11px;
+
+        margin-top: 15px;
+
+    }
+
+    .editorial-date {
+
+        font-size: 19px;
+
+        letter-spacing: 2px;
+
+        margin-top: 25px;
+
+    }
+
+    .editorial-gallery {
+
+        grid-template-columns: 1fr 1.15fr 1fr;
+
+        gap: 7px;
+
+        margin-top: 22px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 210px;
+
+    }
+
+    .editorial-center {
+
+        height: 270px;
+
+    }
+
+    .editorial-image {
+
+        border-radius: 5px;
+
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .editorial-hero {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 9px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 9px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 175px;
+
+    }
+
+    .editorial-center {
+
+        height: 225px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .editorial-heading,
+    .editorial-image {
+
+        animation: none !important;
+
+    }
+
+    .editorial-image img {
+
+        transition: none;
+
+    }
+
+}
+
+
+}
+
+/* =========================================
+   EDITORIAL LUXURY WEDDING BANNER
+========================================= */
+
+.editorial-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    height: auto;
+
+    padding: 105px 4% 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F8F7F3 !important;
+
+    color: #302D2D;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.editorial-hero .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 20px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+.editorial-hero .logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.editorial-hero .nav-links a {
+    color: #454040;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.editorial-hero .nav-links a:hover {
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-button {
+    background: transparent;
+    color: #454040;
+    border: 1px solid #D7C6A3;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.editorial-heading {
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+
+    margin: 0 auto 30px;
+
+    padding-top: 0;
+
+    animation: editorialFadeIn 1.2s ease both;
+}
+
+.editorial-monogram {
+    color: #B58C4A;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    font-style: italic;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.editorial-heading h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6.5vw, 85px);
+
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: #302D2D;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+.heading-line {
+    display: block;
+
+    width: clamp(25px, 5vw, 65px);
+    height: 5px;
+
+    background: #302D2D;
+}
+
+.editorial-amp {
+    color: #B58C4A;
+    font-style: italic;
+}
+
+.editorial-subtitle {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #817875;
+
+    margin-top: 18px;
+}
+
+.editorial-date {
+    font-family: Georgia, serif;
+
+    font-size: clamp(19px, 2.5vw, 26px);
+
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #454040;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   THREE IMAGE GALLERY
+========================================= */
+
+.editorial-gallery {
+
+    width: 100%;
+    max-width: 1450px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px auto 0;
+
+}
+
+
+/* Common Image Styling */
+
+.editorial-image {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #E9E3DA;
+
+}
+
+.editorial-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+.editorial-image:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Left Image */
+
+.editorial-left {
+
+    height: 340px;
+
+}
+
+
+/* Centre Image */
+
+.editorial-center {
+
+    height: 410px;
+
+}
+
+
+/* Right Image */
+
+.editorial-right {
+
+    height: 340px;
+
+}
+
+
+/* =========================================
+   ENTRANCE ANIMATION
+========================================= */
+
+@keyframes editorialFadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.editorial-image {
+
+    animation: editorialPhotoReveal 1.2s ease both;
+
+}
+
+.editorial-left {
+    animation-delay: .2s;
+}
+
+.editorial-center {
+    animation-delay: .45s;
+}
+
+.editorial-right {
+    animation-delay: .7s;
+}
+
+@keyframes editorialPhotoReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .editorial-hero {
+
+        padding: 120px 3% 45px;
+
+    }
+
+    .editorial-gallery {
+
+        gap: 12px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 270px;
+
+    }
+
+    .editorial-center {
+
+        height: 340px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .editorial-hero {
+
+        min-height: 100svh;
+
+        padding: 105px 15px 35px;
+
+    }
+
+    .editorial-hero .navbar {
+
+        padding: 15px 5%;
+
+    }
+
+    .editorial-hero .logo {
+
+        font-size: 19px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 13px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+    .editorial-hero .nav-button {
+
+        display: none;
+
+    }
+
+    .editorial-heading {
+
+        margin-bottom: 15px;
+
+    }
+
+    .editorial-monogram {
+
+        margin-bottom: 17px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: clamp(29px, 7.5vw, 46px);
+
+        gap: 7px;
+
+        white-space: normal;
+
+    }
+
+    .heading-line {
+
+        width: 18px;
+        height: 3px;
+
+    }
+
+    .editorial-subtitle {
+
+        font-size: 11px;
+
+        margin-top: 15px;
+
+    }
+
+    .editorial-date {
+
+        font-size: 19px;
+
+        letter-spacing: 2px;
+
+        margin-top: 25px;
+
+    }
+
+    .editorial-gallery {
+
+        grid-template-columns: 1fr 1.15fr 1fr;
+
+        gap: 7px;
+
+        margin-top: 22px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 210px;
+
+    }
+
+    .editorial-center {
+
+        height: 270px;
+
+    }
+
+    .editorial-image {
+
+        border-radius: 5px;
+
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .editorial-hero {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 9px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 9px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 175px;
+
+    }
+
+    .editorial-center {
+
+        height: 225px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .editorial-heading,
+    .editorial-image {
+
+        animation: none !important;
+
+    }
+
+    .editorial-image img {
+
+        transition: none;
+
+    }
+
+}
+
+
+/* =========================================
+   EDITORIAL LUXURY WEDDING BANNER
+========================================= */
+
+.editorial-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    height: auto;
+
+    padding: 105px 4% 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F8F7F3 !important;
+
+    color: #302D2D;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.editorial-hero .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 20px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+.editorial-hero .logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.editorial-hero .nav-links a {
+    color: #454040;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.editorial-hero .nav-links a:hover {
+    color: #B58C4A;
+}
+
+.editorial-hero .nav-button {
+    background: transparent;
+    color: #454040;
+    border: 1px solid #D7C6A3;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.editorial-heading {
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+
+    margin: 0 auto 30px;
+
+    padding-top: 0;
+
+    animation: editorialFadeIn 1.2s ease both;
+}
+
+.editorial-monogram {
+    color: #B58C4A;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    font-style: italic;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.editorial-heading h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6.5vw, 85px);
+
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: #302D2D;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+.heading-line {
+    display: block;
+
+    width: clamp(25px, 5vw, 65px);
+    height: 5px;
+
+    background: #302D2D;
+}
+
+.editorial-amp {
+    color: #B58C4A;
+    font-style: italic;
+}
+
+.editorial-subtitle {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #817875;
+
+    margin-top: 18px;
+}
+
+.editorial-date {
+    font-family: Georgia, serif;
+
+    font-size: clamp(19px, 2.5vw, 26px);
+
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #454040;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   THREE IMAGE GALLERY
+========================================= */
+
+.editorial-gallery {
+
+    width: 100%;
+    max-width: 1450px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 30px auto 0;
+
+}
+
+
+/* Common Image Styling */
+
+.editorial-image {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #E9E3DA;
+
+}
+
+.editorial-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+.editorial-image:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Left Image */
+
+.editorial-left {
+
+    height: 340px;
+
+}
+
+
+/* Centre Image */
+
+.editorial-center {
+
+    height: 410px;
+
+}
+
+
+/* Right Image */
+
+.editorial-right {
+
+    height: 340px;
+
+}
+
+
+/* =========================================
+   ENTRANCE ANIMATION
+========================================= */
+
+@keyframes editorialFadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.editorial-image {
+
+    animation: editorialPhotoReveal 1.2s ease both;
+
+}
+
+.editorial-left {
+    animation-delay: .2s;
+}
+
+.editorial-center {
+    animation-delay: .45s;
+}
+
+.editorial-right {
+    animation-delay: .7s;
+}
+
+@keyframes editorialPhotoReveal {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .editorial-hero {
+
+        padding: 120px 3% 45px;
+
+    }
+
+    .editorial-gallery {
+
+        gap: 12px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 270px;
+
+    }
+
+    .editorial-center {
+
+        height: 340px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .editorial-hero {
+
+        min-height: 100svh;
+
+        padding: 105px 15px 35px;
+
+    }
+
+    .editorial-hero .navbar {
+
+        padding: 15px 5%;
+
+    }
+
+    .editorial-hero .logo {
+
+        font-size: 19px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 13px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+    .editorial-hero .nav-button {
+
+        display: none;
+
+    }
+
+    .editorial-heading {
+
+        margin-bottom: 15px;
+
+    }
+
+    .editorial-monogram {
+
+        margin-bottom: 17px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: clamp(29px, 7.5vw, 46px);
+
+        gap: 7px;
+
+        white-space: normal;
+
+    }
+
+    .heading-line {
+
+        width: 18px;
+        height: 3px;
+
+    }
+
+    .editorial-subtitle {
+
+        font-size: 11px;
+
+        margin-top: 15px;
+
+    }
+
+    .editorial-date {
+
+        font-size: 19px;
+
+        letter-spacing: 2px;
+
+        margin-top: 25px;
+
+    }
+
+    .editorial-gallery {
+
+        grid-template-columns: 1fr 1.15fr 1fr;
+
+        gap: 7px;
+
+        margin-top: 22px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 210px;
+
+    }
+
+    .editorial-center {
+
+        height: 270px;
+
+    }
+
+    .editorial-image {
+
+        border-radius: 5px;
+
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .editorial-hero {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .editorial-hero .nav-links {
+
+        gap: 9px;
+
+    }
+
+    .editorial-hero .nav-links a {
+
+        font-size: 9px;
+
+    }
+
+    .editorial-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+    .editorial-left,
+    .editorial-right {
+
+        height: 175px;
+
+    }
+
+    .editorial-center {
+
+        height: 225px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .editorial-heading,
+    .editorial-image {
+
+        animation: none !important;
+
+    }
+
+    .editorial-image img {
+
+        transition: none;
+
+    }
+
+}
+
+
+
+/* =====================================
+   ROTATING GOLD DOTTED PROFILE RING
+===================================== */
+
+.profile-image {
+    position: relative;
+    isolation: isolate;
+    border: 1px solid transparent;
+}
+
+/* Rotating dotted circle */
+
+.profile-image::before {
+    content: "";
+
+    position: absolute;
+    inset: -8px;
+
+    border-radius: 50%;
+
+    background: repeating-conic-gradient(
+        from 0deg,
+        #A51D60 0deg 2deg,
+        transparent 2deg 8deg
+    );
+
+    /* Keep only the outer circular ring */
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 2px),
+        #000 calc(100% - 1.5px)
+    );
+
+    mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 2px),
+        #000 calc(100% - 1.5px)
+    );
+
+    animation: rotateGoldRing 15s linear infinite;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Keep profile image stationary */
+
+.profile-image img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Clockwise rotation */
+
+@keyframes rotateGoldRing {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-image::before {
+        animation: none;
+    }
+
+}
