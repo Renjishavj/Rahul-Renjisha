@@ -1369,7 +1369,29 @@ h1 {
     background: #fbf6f1;
     padding: 65px 20px 75px;
     text-align: center;
-    margin-top: -150px;
+
+    /* Prevent overlapping the gallery */
+    margin-top: 0 !important;
+
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-section {
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-load-more {
+    position: relative;
+    z-index: 3;
+    display: block;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.gallery-load-more button {
+    display: inline-block;
 }
 
 .blessings-content {
@@ -4520,3 +4542,25 @@ body.main-page-revealing .blessings-section {
     }
 
 }
+
+
+/* Reduce spacing between Gallery and Blessings */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding-bottom: 15px !important;
+    }
+
+    .gallery-load-more {
+        margin-top: 25px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .blessings-section {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
+    }
+
+}
+
